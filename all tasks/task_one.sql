@@ -1,0 +1,1 @@
+SELECT customers.name, customers.email, customers.location, COUNT(orders.order_id) as total_order FROM customers LEFT JOIN orders ON customers.customer_id = orders.customer_id GROUP BY customers.name ORDER BY total_order DESC 
